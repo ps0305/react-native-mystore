@@ -1,0 +1,26 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/bin/yarn run ios
+
+PATH: 
+  /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+
+Yarn version: 
+  1.9.4
+
+Node version: 
+  8.11.3
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: EACCES: permission denied, scandir '/Users/test/.config/yarn/link'
+
+npm manifest: 
+  No manifest
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
