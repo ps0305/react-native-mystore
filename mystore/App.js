@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
 import { white } from './node_modules/ansi-colors';
+import FlexExamples from './flex';
 
 export default class App extends React.Component {
   handlePress(e){
@@ -8,20 +9,15 @@ export default class App extends React.Component {
   }
   render() {
     return (
-      <View style={styles.container}>
-        <Text>React Native App ! </Text>
-        <Button onPress={this.handlePress} title="Press Me !" />
-        <Text>Changes you make will automatically reload.</Text>
-        <Text>Shake your phone to open the developer menu.</Text>
-      </View>
+      <FlexExamples/>
     );
   }
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 10,
-    backgroundColor: 'red',
+    flex: 1,
+    backgroundColor: 'white',
     alignItems: 'center',
     justifyContent: 'center',
     flexDirection:'row',
