@@ -12,7 +12,7 @@ class FlexExamples extends Component {
       >
         <View
           style={{
-            backgroundColor: "orange",
+            backgroundColor: "pink",
             flexBasis: 100
           }}
         />
@@ -20,7 +20,7 @@ class FlexExamples extends Component {
         <View style={{ backgroundColor: "green", flexBasis: 100 }} />
         <View
           style={{
-            backgroundColor: "orange",
+            backgroundColor: "red",
             flexBasis: 100
           }}
         />
@@ -28,7 +28,7 @@ class FlexExamples extends Component {
         <View style={{ backgroundColor: "green", flexBasis: 100 }} />
         <View
           style={{
-            backgroundColor: "orange",
+            backgroundColor: "white",
             flexBasis: 100
           }}
         />
