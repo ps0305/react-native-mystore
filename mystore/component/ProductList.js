@@ -17,7 +17,7 @@ class ProductList extends Component{
             <ScrollView>
                 {isLoading && <ActivityIndicator size="large" color="green"/>}
                 {products.map(p=>(
-                    <Text key={p.id}>{p.title}</Text>
+                    <Text style={{backgroundColor:"forestgreen",margin:5}} key={p.id}>{p.title}</Text>
                 ))}
             </ScrollView>
         );
