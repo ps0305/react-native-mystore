@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View ,Text, ActivityIndicator}  from "react-native";
+import { ScrollView ,Text, ActivityIndicator}  from "react-native";
 
 class ProductList extends Component{
     constructor(props) {
@@ -14,12 +14,12 @@ class ProductList extends Component{
     render() {
         const { products, isLoading} = this.state;
         return(
-            <View>
+            <ScrollView>
                 {isLoading && <ActivityIndicator size="large" color="green"/>}
                 {products.map(p=>(
                     <Text key={p.id}>{p.title}</Text>
                 ))}
-            </View>
+            </ScrollView>
         );
     }
 }
