@@ -26,27 +26,37 @@ class ProductList extends Component {
 
   _renderItem({ item: product }) {
     return (
-        <View style={{flex:1,flexDirection:"row"}}>
-            <Image
-            style={{width:100,height:100}}
-            source={{ uri: `http://localhost:4000/images/${product.image}`}}
-            resizeMode="center">
-
-            </Image>
-            <Text
-        style={{ /*backgroundColor: "lightgreen",*/ marginBottom: 25 }}
-        key={product.id}
+      <View
+        style={{
+          flex: 1,
+          flexDirection: "row",
+          marginRight: 35,
+          marginLeft: 35
+        }}
       >
-        {product.title}
-      </Text>
-      <Ionicons
-                name="md-heart"
-                size={32}
-                color="#00ff80"
-                style={{ marginRight: 10 }}
-              />
+        <Image
+          style={{ width: 100, height: 100 }}
+          source={{ uri: `http://localhost:4000/images/${product.image}` }}
+          resizeMode="center"
+        />
+        <View style={{ flex: 1, flexDirection: "row" ,justifyContent:"space-between"}}>
+          <Text
+            style={{
+              marginBottom: 25,
+              overflow: "hidden"
+            }}
+            key={product.id}
+          >
+            {product.id}-{product.title}
+          </Text>
+          <Ionicons
+            name="md-heart-outline"
+            size={32}
+            color="red"
+            style={{marginRight:10 }}
+          />
         </View>
-      
+      </View>
     );
   }
 
