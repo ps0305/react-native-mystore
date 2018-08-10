@@ -1,5 +1,8 @@
 This project was bootstrapped with [Create React Native App](https://github.com/react-community/create-react-native-app).
 
+![2018-08-10 07_32_03-settings](https://user-images.githubusercontent.com/34129569/43949124-3b551204-9caa-11e8-9598-10d741f539da.png)
+
+
 Below you'll find information about performing common tasks. The most recent version of this guide is available [here](https://github.com/react-community/create-react-native-app/blob/master/react-native-scripts/template/README.md).
 
 ## Table of Contents
