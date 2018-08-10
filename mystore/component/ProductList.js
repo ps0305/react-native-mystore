@@ -35,15 +35,17 @@ class ProductList extends Component {
         }}
       >
         <Image
-          style={{ width: 100, height: 100 }}
+          style={{ width: 100, height: 100 ,marginRight:30}}
           source={{ uri: `http://localhost:4000/images/${product.image}` }}
           resizeMode="center"
         />
-        <View style={{ flex: 1, flexDirection: "row" ,justifyContent:"space-between"}}>
+        <View style={{ flex: 1, flexDirection: "row" ,justifyContent:"space-around"}}>
           <Text
             style={{
               marginBottom: 25,
-              overflow: "hidden"
+              overflow: "hidden",
+              backgroundColor:'#D3D3D3',
+              
             }}
             key={product.id}
           >
@@ -53,7 +55,7 @@ class ProductList extends Component {
             name="md-heart-outline"
             size={32}
             color="red"
-            style={{marginRight:10 }}
+            style={{marginLeft:25 }}
           />
         </View>
       </View>
