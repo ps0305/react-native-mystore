@@ -4,13 +4,15 @@ import {
   Text,
   ActivityIndicator,
   ScrollView,
-  FlatList
+  FlatList,
+  Image
 } from "react-native";
+import { FontAwesome ,Ionicons} from '@expo/vector-icons';
 
 class ProductList extends Component {
   constructor(props) {
     super(props);
-    this.state = { products: [], isLoading: true, page: 1, limit: 20 };
+    this.state = { products: [], isLoading: true, page: 1, limit: 19 };
   }
 
   async componentDidMount() {
@@ -24,12 +26,27 @@ class ProductList extends Component {
 
   _renderItem({ item: product }) {
     return (
-      <Text
-        style={{ backgroundColor: "lightgreen", marginBottom: 25 }}
+        <View style={{flex:1,flexDirection:"row"}}>
+            <Image
+            style={{width:100,height:100}}
+            source={{ uri: `http://localhost:4000/images/${product.image}`}}
+            resizeMode="center">
+
+            </Image>
+            <Text
+        style={{ /*backgroundColor: "lightgreen",*/ marginBottom: 25 }}
         key={product.id}
       >
         {product.title}
       </Text>
+      <Ionicons
+                name="md-heart"
+                size={32}
+                color="#00ff80"
+                style={{ marginRight: 10 }}
+              />
+        </View>
+      
     );
   }
 
