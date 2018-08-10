@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
 import { white } from './node_modules/ansi-colors';
 import FlexExamples from './flex';
+import ProductList from './component/ProductList';
 
 export default class App extends React.Component {
   handlePress(e){
@@ -9,7 +10,7 @@ export default class App extends React.Component {
   }
   render() {
     return (
-      <FlexExamples/>
+      <ProductList/>
     );
   }
 }
