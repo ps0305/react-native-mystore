@@ -1,18 +1,12 @@
 import React, { Component } from "react";
-import {
-  View,
-  Text,
-  ActivityIndicator,
-  ScrollView,
-  FlatList,
-  Image
-} from "react-native";
-import { FontAwesome ,Ionicons} from '@expo/vector-icons';
+import { View, ActivityIndicator, FlatList } from "react-native";
+
+import ProductListItem from "./ProductListItems";
 
 class ProductList extends Component {
   constructor(props) {
     super(props);
-    this.state = { products: [], isLoading: true, page: 1, limit: 19 };
+    this.state = { products: [], isLoading: true, page: 1, limit: 20 };
   }
 
   async componentDidMount() {
@@ -25,41 +19,7 @@ class ProductList extends Component {
   }
 
   _renderItem({ item: product }) {
-    return (
-      <View
-        style={{
-          flex: 1,
-          flexDirection: "row",
-          marginRight: 35,
-          marginLeft: 35
-        }}
-      >
-        <Image
-          style={{ width: 100, height: 100 ,marginRight:30}}
-          source={{ uri: `http://localhost:4000/images/${product.image}` }}
-          resizeMode="center"
-        />
-        <View style={{ flex: 1, flexDirection: "row" ,justifyContent:"space-around"}}>
-          <Text
-            style={{
-              marginBottom: 25,
-              overflow: "hidden",
-              backgroundColor:'#D3D3D3',
-              
-            }}
-            key={product.id}
-          >
-            {product.id}-{product.title}
-          </Text>
-          <Ionicons
-            name="md-heart-outline"
-            size={32}
-            color="red"
-            style={{marginLeft:25 }}
-          />
-        </View>
-      </View>
-    );
+    return <ProductListItem product={product} />;
   }
 
   _keyExtractor(p, i) {
